@@ -232,6 +232,58 @@ body::before {
   font-weight: 500;
 }
 
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1.35rem;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 10.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.22);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.about-link:hover {
+  transform: translateY(-1px);
+}
+
+.about-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.about-link-github {
+  background: #24292f;
+}
+
+.about-link-github:hover {
+  background: #1b1f23;
+}
+
+.about-link-vercel {
+  background: #000;
+}
+
+.about-link-vercel:hover {
+  background: #111;
+}
+
 @media (max-width: 700px) {
   .page {
     margin: 1.25rem auto;
