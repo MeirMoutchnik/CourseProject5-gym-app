@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --ink: #15202b;
+  --muted: #475569;
+  --panel: #f8fafc;
+  --panel-border: rgba(21, 32, 43, 0.12);
+  --accent: #ea580c;
+  --accent-hover: #f97316;
+  --danger: #b91c1c;
+  --success: #15803d;
+  --upcoming: #1d4ed8;
+  --past: #64748b;
+  --radius: 14px;
+  --shadow: 0 16px 48px rgba(0, 0, 0, 0.38);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background-color: #d7d3cc;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("/gym-bg.jpg") center / cover no-repeat;
+  filter: brightness(1.85) contrast(1.04) saturate(1.05);
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.8rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.05rem 1.5rem;
+  background: rgba(11, 14, 20, 0.92);
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-nav a,
+.site-nav button {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+}
+
+.site-nav a:hover,
+.site-nav button:hover {
+  color: var(--accent-hover);
+}
+
+.page {
+  width: min(720px, 94vw);
+  margin: 2rem auto;
+  padding: 2rem 1.75rem;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.page-wide {
+  width: min(1180px, 96vw);
+}
+
+.page h1 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.page p {
+  margin: 0.4rem 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.page form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.page input,
+.page select {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 1.05rem;
+}
+
+.page input:focus,
+.page select:focus {
+  outline: 2px solid rgba(234, 88, 12, 0.35);
+  border-color: var(--accent);
+}
+
+.page button {
+  padding: 0.75rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.page button:hover {
+  background: var(--accent-hover);
+}
+
+.page button[type="button"] {
+  background: #334155;
+}
+
+.page button[type="button"]:hover {
+  background: #475569;
+}
+
+.page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.page th,
+.page td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.55rem 0.6rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.page thead th {
+  background: #1e293b;
+  color: #f8fafc;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.page tbody tr:hover {
+  background: rgba(234, 88, 12, 0.08);
+}
+
+.page th.actions-heading {
+  text-align: center;
+}
+
+.page td.action-cell {
+  width: 1%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.page table button {
+  margin: 0;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+.lesson-upcoming {
+  color: var(--upcoming);
+  font-weight: 600;
+}
+
+.lesson-past {
+  color: var(--past);
+}
+
+.form-error,
+.page p.error {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+.form-success,
+.page p.success {
+  color: var(--success);
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin: 1.25rem auto;
+    padding: 1.4rem 1rem;
+  }
+
+  .page table {
+    display: block;
+    overflow-x: auto;
+  }
+}
