@@ -15,6 +15,6 @@ app.use('/users', usersRoutes);
 
 export default app;
 
-app.listen(3000, "0.0.0.0", () => {
-    console.log('Server is running on port 3000');
+app.listen(3001, "0.0.0.0", () => {
+    console.log('Server is running on port 3001');
 });

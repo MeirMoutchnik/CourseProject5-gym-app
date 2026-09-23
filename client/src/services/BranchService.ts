@@ -1,6 +1,6 @@
 import type { Branch } from '../types/Branch';
 
-const API_URL = 'http://localhost:3000/branches';
+const API_URL = 'http://localhost:3001/branches';
 
 export const getBranches = async (): Promise<Branch[]> => {
     const response = await fetch(`${API_URL}`);
