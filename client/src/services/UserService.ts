@@ -1,7 +1,6 @@
 import type { User } from '../types/User';
-import { API_BASE } from './apiBase';
 
-const API_URL = `${API_BASE}/users`;
+const API_URL = 'http://localhost:3000/users';
 
 export const registerUser = async (user: User) => {
     const response = await fetch(`${API_URL}/register`, {

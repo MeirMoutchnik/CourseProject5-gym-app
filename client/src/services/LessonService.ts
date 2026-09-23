@@ -1,7 +1,6 @@
 import type { Lesson } from '../types/Lesson';
-import { API_BASE } from './apiBase';
 
-const API_URL = `${API_BASE}/lessons`;
+const API_URL = 'http://localhost:3000/users';
 
 export const getLessons = async (branch_code: string): Promise<Lesson[]> => {
     const response = await fetch(`${API_URL}/${branch_code}`, {
