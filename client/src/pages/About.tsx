@@ -13,7 +13,7 @@ export default function About() {
                     </svg>
                     GitHub
                 </a>
-                <a className="about-link about-link-vercel" href="https://vercel.com/meir-moutchniks-projects/client" target="_blank" rel="noopener noreferrer">
+                <a className="about-link about-link-vercel" href="https://client-tau-rust-33.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
                         <path fill="currentColor" d="M8 1.5 15 14.5H1L8 1.5z" />
                     </svg>
